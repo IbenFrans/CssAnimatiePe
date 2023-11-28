@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Laag_2" data-name="Laag 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 484.45 253.97">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-dasharray: 0 0 12.14 12.14;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        fill: none;
+        stroke: #1d1d1b;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+      }
+
+      .cls-3 {
+        stroke-dasharray: 0 0 11.66 11.66;
+      }
+
+      .cls-4 {
+        stroke-dasharray: 0 0 12.51 12.51;
+      }
+    </style>
+  </defs>
+  <g id="Laag_1-2" data-name="Laag 1">
+    <g>
+      <path class="cls-2" d="m0,1.5c2.02,0,4.02.05,6,.13"/>
+      <path class="cls-3" d="m17.63,2.51c126.41,14.43,153.87,178.93,159.08,224.72"/>
+      <path class="cls-2" d="m177.32,233.02c.37,3.85.5,5.98.5,5.98,0,0,.3-2.14.95-5.92"/>
+      <path class="cls-1" d="m180.98,221.15c7.97-39.83,31.96-132.44,82.52-132.15,49.38-.31,71.68,101.7,77.92,137.09"/>
+      <path class="cls-2" d="m342.44,232.07c.61,3.78.9,5.93.9,5.93,0,0,.73-2.09,2.16-5.6"/>
+      <path class="cls-4" d="m350.51,220.95c11.14-23.7,34.67-63.65,66.54-62.95,33.33.74,54.04,46.36,62.1,68.37"/>
+      <path class="cls-2" d="m481.22,232.28c1.19,3.58,1.79,5.72,1.79,5.72"/>
+    </g>
+  </g>
+</svg>

@@ -11,7 +11,8 @@ img{
 }
 
 main, header{
-    width: 80vh;
+    width: 700px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 main{
@@ -55,7 +56,52 @@ section {
     border-radius: 5px;
     background-color: grey;
     margin: 0.7rem;
+    position: relative;
+    overflow: hidden;
+    
 }
+
+#vakken .vak img{
+    object-fit: cover;
+    border-radius: 5px;
+    filter: blur(10px);
+    transform: scale(1.3);
+    transition-property: filter, transform;
+    transition-duration: 0.8s;
+    transition-timing-function: ease-in-out;
+}
+
+/* animatie */
+#vakken .vak:hover img{
+    filter: blur(0);
+    transform: scale(1);
+    
+}
+
+#vakken .vak p{
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.418);
+    color: white;
+
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    padding: 0.5rem;
+    width: 100%;
+
+
+    transition-property: opacity, padding-bottom;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    opacity: 0;
+}
+
+#vakken .vak:hover p{
+    opacity: 100;
+    padding-bottom: 1.5rem;
+}
+
 
 #vakken #column2, #vakken #column3{
     display: flex;
@@ -105,6 +151,16 @@ section#aboutMe{
     flex-shrink: 0;
     min-width: 100%;
     min-height: 100%;
+    transform: scale(1);
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0.2s;
+}
+
+/*animatie */
+#aboutMe #imageDiv:hover img{
+    transform: scale(1.3);
 }
 
 #aboutMe #aboutMeDescription{
@@ -138,7 +194,161 @@ section#myWork{
 
 #myWork #works .work{
     height: 200px;
-    width: 30%;
+    width: 200px;
     background-color: grey;
     border-radius: 5px;
+    overflow: hidden;
 }
+
+#myWork #works .work:hover{
+    animation: workBurst 0.3s ease-in-out;
+}
+
+@keyframes workBurst {
+    0% {
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.3);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+#myWork #works .work img{
+    border-radius: 5px;
+    transform: scale(1.2);
+    object-fit: cover;
+
+    filter: blur(10px);
+    transform: scale(1.3);
+    transition-property: filter, transform;
+    transition-duration: 0.8s;
+    transition-timing-function: ease-in-out;
+}
+
+#myWork #works .work:hover img{
+    transform: scale(1);
+    filter: blur(0);
+}
+
+/* Bouncing Ball */
+#bouncingBall{
+    position: relative;
+    margin-top: 10rem;
+}
+
+#bouncingBall svg{
+    stroke: grey;
+}
+
+#bouncingBall #ball{
+    position: absolute;
+
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: #4BC1BD;
+    animation: updown 1.5s, leftright 1.5s linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes updown {
+    0%{
+        bottom: 90%;
+        animation-timing-function: cubic-bezier(.76,0,1,1.01);
+    }
+    33%{
+        bottom: 0%;
+        animation-timing-function: cubic-bezier(0,-0.01,.4,.99);
+    }
+    49.5%{
+        bottom: 60%;
+        animation-timing-function: cubic-bezier(.6,.01,1,1);
+    }
+    66%{
+        bottom: 0%;
+        animation-timing-function: cubic-bezier(0,-0.01,.46,1);
+    }
+    82.5%{
+        bottom: 35%;
+        animation-timing-function: cubic-bezier(.6,.01,1,1);
+    }
+    100%{
+        bottom: 0%;
+        animation-timing-function: cubic-bezier(0,-0.01,.46,1);
+    }
+}
+
+@keyframes leftright {
+    0%{
+        left: 0%;
+    }
+    33%{
+        left: 33%;
+    }
+    66%{
+        left: 66%;
+    }
+    100%{
+        left: 95%;
+    }
+}
+
+ @media  screen and (max-width: 700px){
+    body{
+        overflow-x: hidden;
+    }
+    main, header{
+        width: 90%;
+        margin: 0 auto;
+    }
+    main{
+        margin-bottom: 5rem;
+    }
+    header{
+        margin-top: 6rem;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    header img{
+        margin-bottom: 2rem;
+    }
+
+    #vakken{
+        flex-direction: column;
+    }
+
+    section#aboutMe{
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+    }
+
+    section#aboutMe #imageDiv{
+        height: 200px;
+        width: 200px;
+        margin-bottom: 2rem;
+    }
+
+    #aboutMe #aboutMeDescription{
+        align-items: center;
+        text-align: center;
+    }
+
+    #aboutMe #aboutMeDescription h1,#aboutMe #aboutMeDescription p, #aboutMe #aboutMeDescription button{
+        margin-bottom: 1rem;
+    }
+
+    #works{
+        flex-direction: column;
+        align-content: space-between;
+        height: 100%;
+    }
+
+    #myWork #works .work{
+        margin-bottom: 2rem;
+    }
+ }
