@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;500;600&family=Pacifico&display=swap" rel="stylesheet">
     <title>PE CSS Animatie</title>
 </head>
 <body>
     <header>
         <img id="pxl_logo" src="assets/logo_pxl_bol.png" alt="pxl logo">
         <div id="titelDescription">
-            <h1>MOTION DESIGN PE</h1>
-            <p>Voor deze opdracht maak je een geanimeerde portfolio-website.</p>
+            <h1 class="titel">Motion Design Pe</h1>
+            <p class="text">Voor deze opdracht maak je een geanimeerde portfolio-website.</p>
         </div>
     </header>
     <main>
@@ -47,13 +48,13 @@
                 </div>
             </div>
         </section>
-        <section id="aboutMe">
+        <section id="aboutMe" class="banner">
             <div id="imageDiv">
                 <img src="assets/jam jar.jpg" alt="photo of me">
             </div>
             <div id="aboutMeDescription">
-                <h1>IBEN FRANS</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt iusto asperiores expedita rerum quidem. Placeat qui tenetur iusto eius hic necessitatibus at.</p>
+                <h1 class="titel">Iben Frans</h1>
+                <p class="text">Yes, dit ben ik in het echt. Cute en misschien een beetje stinky! Ik hou ook heel veel van pompoenen en halloween.</p>
                 <button>Contact me</button>
             </div>
         </section>
@@ -72,7 +73,10 @@
             </div>
         </section>
         <section id="bouncingBall">
-            <div id="ball"></div>
+            
+            <svg id="ball">
+                <circle cx="30" cy="30" r="30"/>
+              </svg>
             <svg id="Laag_2" data-name="Laag 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 484.45 253.97">
                 <defs>
                   <style>

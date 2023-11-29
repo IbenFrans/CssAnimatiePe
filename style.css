@@ -27,19 +27,35 @@ header #titelDescription{
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: flex-start;
 }
 header #titelDescription h1{
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 header img{
     max-width: 15%;
     height: 100%;
     margin-right: 2rem;
+    transition: transform 2s ease-in-out;
+}
+
+header img:hover{
+    transform: rotate(360deg);
 }
 
 section {
     margin-top: 5rem;
+}
+
+.titel{
+    font-size: 50px;
+    color:#4BC1BD;
+    font-family: 'Pacifico', cursive;
+}
+
+.text{
+    font-size: 16px;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 /* VAKKEN */
@@ -137,13 +153,14 @@ section#aboutMe{
 
 #aboutMe #imageDiv{
     background-color: grey;
-    height: 200px;
-    width: 200px;
+    min-height: 200px;
+    min-width: 200px;
     border-radius: 50%;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 2rem;
 }
 
 #aboutMe #imageDiv img{
@@ -176,7 +193,15 @@ section#aboutMe{
     border-radius: 25px;
     border: none;
     background-color: grey;
-    color: white
+    color: white;
+    transition: all, 0.5s;
+    margin-top: 1rem;
+}
+
+#aboutMe button:hover{
+    border: 2px solid #4BC1BD;
+    background-color: rgba(255, 255, 255, 0);
+    color:#4BC1BD
 }
 
 /* My Work */
@@ -248,8 +273,8 @@ section#myWork{
 
     height: 60px;
     width: 60px;
-    border-radius: 50%;
-    background-color: #4BC1BD;
+    fill: #4BC1BD;
+    stroke: none;
     animation: updown 1.5s, leftright 1.5s linear;
     animation-iteration-count: infinite;
 }
@@ -311,6 +336,11 @@ section#myWork{
         margin-top: 6rem;
         flex-direction: column;
         justify-content: space-around;
+        align-items: center;
+
+    }
+
+    header #titelDescription{
         align-items: center;
     }
     header img{
